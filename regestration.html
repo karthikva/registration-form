@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unique Form Validation</title>
+    <style>
+        body {
+            background-color:rgb(93, 168, 187) ;
+            color:rgb(35, 19, 80);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #0b4c80;
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+
+        .form-container {
+            background-color: #b3cc57;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 18px;
+            color: #5a5a5a;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #a2d16f;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+        }
+
+        .submit-button {
+            background-color: #226899;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registration Form</h1>
+        <form action="/myaction.php" name="myform" onsubmit="return validateForm()" method="post">
+            <div class="form-group" id="name">
+                <label class="form-label" for="fname">Name:</label>
+                <input class="form-input" type="text" name="fname" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="form-group" id="email">
+                <label class="form-label" for="femail">Email:</label>
+                <input class="form-input" type="email" name="femail" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="form-group" id="phone">
+                <label class="form-label" for="fphone">Phone:</label>
+                <input class="form-input" type="tel" name="fphone" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="form-group" id="pass">
+                <label class="form-label" for="fpass">Password:</label>
+                <input class="form-input" type="password" name="fpass" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="form-group" id="cpass">
+                <label class="form-label" for="fcpass">Confirm Password:</label>
+                <input class="form-input" type="password" name="fcpass" required>
+                <span class="error-message"></span>
+            </div>
+            <input type="submit" class="submit-button" value="Submit">
+        </form>
+    </div>
+</body>
+<script>
+    // Your JavaScript validation code here
+</script>
+</html>
